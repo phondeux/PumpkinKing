@@ -1,5 +1,6 @@
 package com.phondeux.pumpkinking;
 
+import com.phondeux.pumpkinking.configuration.ConfigurationHandler;
 import com.phondeux.pumpkinking.proxy.IProxy;
 import com.phondeux.pumpkinking.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -13,10 +14,10 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
  * Created by Glenn on 8/13/2014.
  */
 public class PumpkinKing {
-    @Mod.Instance("PumpkinKing")
+    @Mod.Instance(Reference.MOD_ID)
     public static PumpkinKing instance;
 
-    @SidedProxy(clientSide = "com.phondeux.pumpkinking.proxy.ClientProxy", serverSide = "com.phondeux.pumpkinking.proxy.ServerProxy")
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static IProxy proxy;
 
     /*
@@ -24,6 +25,7 @@ public class PumpkinKing {
      */
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 
     }
 
