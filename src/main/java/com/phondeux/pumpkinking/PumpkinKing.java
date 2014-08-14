@@ -1,6 +1,7 @@
 package com.phondeux.pumpkinking;
 
 import com.phondeux.pumpkinking.handler.ConfigurationHandler;
+import com.phondeux.pumpkinking.init.ModItems;
 import com.phondeux.pumpkinking.proxy.IProxy;
 import com.phondeux.pumpkinking.reference.Reference;
 import com.phondeux.pumpkinking.utility.LogHelper;
@@ -30,6 +31,8 @@ public class PumpkinKing {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Initialization Complete!");
+
+        ModItems.init();
     }
 
     /*
