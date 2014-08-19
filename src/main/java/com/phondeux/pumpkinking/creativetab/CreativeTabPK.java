@@ -2,6 +2,7 @@ package com.phondeux.pumpkinking.creativetab;
 
 //import com.phondeux.pumpkinking.init.ModItems;
 import com.phondeux.pumpkinking.reference.Reference;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -13,7 +14,7 @@ public class CreativeTabPK {
 
         @Override
         public Item getTabIconItem() {
-            return Item.getItemById(91);
+            return Item.getItemFromBlock(Block.getBlockFromName("lit_pumpkin"));
         }
     };
 }
