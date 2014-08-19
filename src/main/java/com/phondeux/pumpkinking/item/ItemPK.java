@@ -1,5 +1,6 @@
 package com.phondeux.pumpkinking.item;
 
+import com.phondeux.pumpkinking.creativetab.CreativeTabPK;
 import com.phondeux.pumpkinking.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -13,6 +14,7 @@ import net.minecraft.item.ItemStack;
 public class ItemPK extends Item {
     public ItemPK() {
         super();
+        this.setCreativeTab(CreativeTabPK.PK_TAB);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.phondeux.pumpkinking.block;
 
+import com.phondeux.pumpkinking.creativetab.CreativeTabPK;
 import com.phondeux.pumpkinking.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -13,7 +14,9 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 public class BlockPK extends Block {
     public BlockPK(Material material) {
         super(material);
+        this.setCreativeTab(CreativeTabPK.PK_TAB);
     }
+
 
     public BlockPK() {
         this(Material.rock);
